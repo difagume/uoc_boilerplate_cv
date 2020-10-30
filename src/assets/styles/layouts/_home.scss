@@ -1,0 +1,354 @@
+/**
+ * Estilos aplicados a etiquetas
+ */
+
+/* Componente html base */
+html {
+  box-sizing: border-box;
+  font-family: $font-family-nunito;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: inherit;
+
+  &::after { box-sizing: inherit; }
+
+  &::before { box-sizing: inherit; }
+}
+
+h3 {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: calc(1.2916rem + 0.5vw);
+
+  @include margin-font-weight(0.35rem, 0.35rem, 600);
+}
+
+h5 {
+  font-size: calc(1rem + 0.5vw);
+
+  @include margin-font-weight(10px, 0, 400);
+}
+
+h6 {
+  font-size: calc(0.66rem + 0.5vw);
+
+  @include margin-font-weight(10px, 0, 400);
+}
+
+p {
+  color: $color-default;
+  font-size: calc(0.72rem + 0.5vw);
+}
+
+ul {
+  font-size: calc(0.72rem + 0.5vw);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $color-neutro;
+  margin: 20px 0;
+}
+
+a { color: inherit; }
+
+label {
+  display: inline-block;
+  width: 30%;
+  padding-left: 10px;
+  color: $color-primary;
+}
+
+input {
+  width: 63%;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  border: 0;
+  border-radius: 0.15rem;
+  color: $color-default;
+  outline: none;
+}
+
+/**
+ * Estilos aplicados a clases
+ */ 
+
+/* Componente sección body */
+.body {
+  margin: 0;
+  background-image: linear-gradient(to bottom, rgba($background-gradient-top, 0.52), rgba($background-gradient-bottom, 0.73)), url(../images/bg.jpg);
+  background-position: center top;
+  background-size: cover;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.display-block { display: block; }
+
+/* Componente de contenido de sección body */
+.content {
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Componente de contenedores */
+.container {
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+
+  &::before {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  padding: 0 16px;
+}
+
+/* Relleno para componentes de filas y columnas */
+.padding { padding: 15px 8px; }
+
+/* Componente de fila */
+.row {
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+
+  &::before {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+/* Componentes de columnas */
+.col-left { @include float-left; }
+
+.col-right { @include float-left; }
+
+/* Componente de tarjetas */
+.card {
+  border-radius: 6px;
+  box-shadow: $box-shadow;
+}
+
+/**
+ * Componente sección Avatar
+ */
+.avatar-container {
+  position: relative;
+  padding-top: 6%;
+}
+
+.avatar-image {
+  overflow: hidden;
+  max-width: 80%;
+  border-style: none;
+  border-radius: 50%;
+  box-shadow: $box-shadow-img;
+  vertical-align: middle;
+}
+
+.margin-top-low { margin-top: -0.8rem; }
+
+/**
+ * Componente sección Habilidades
+ */
+.progress-bar {
+  background-color: $color-primary-bg;
+  border-radius: 16px;
+  font-size: x-small;
+}
+
+.progress-60 { width: 60%; }
+
+.progress-65 { width: 65%; }
+
+.progress-70 { width: 70%; }
+
+.progress-75 { width: 75%; }
+
+.progress-80 { width: 80%; }
+
+.progress-85 { width: 85%; }
+
+.progress-90 { width: 90%; }
+
+.progress-95 { width: 95%; }
+
+/* Componente sección Sobre mi */
+.info {
+  line-height: initial;
+  text-align: justify;
+}
+
+/* Componente sección Contáctame fieldset */
+.field-group {
+  border: 0;
+  background-color: rgba($color-primary-bg, 0.4);
+  border-radius: 6px;
+}
+
+/* Botón dark mode */
+.button-darkmode {
+  position: fixed;
+  z-index: 1;
+  right: 32px;
+  bottom: 32px;
+  left: unset;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+/* Botones base */
+.button {
+  padding: 0.3rem 0.8rem;
+  border: 0;
+  background-color: $color-primary;
+  border-radius: 0.15rem;
+  box-shadow: $box-shadow;
+  color: $color-white;
+  cursor: pointer;
+  outline: none;
+
+  &:hover { background-color: $color-primary-bg; }
+
+  &:active { background-color: $color-secondary; }
+}
+
+/**
+ * Efectos
+ */
+.animate-bottom {
+  position: relative;
+  animation: animatebottom 1.3s;
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -25px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.hover-opacity {
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.hover-primary {
+  &:hover {
+    color: $color-primary;
+  }
+
+  &:active {
+    color: $color-secondary;
+  }
+}
+
+/**
+ * Formato
+ */
+.center {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 16px;
+}
+
+.margin-bottom {
+  margin-bottom: 16px;
+}
+
+.margin-right {
+  margin-right: 0.5rem;
+}
+
+.margin-low {
+  margin-top: -0.6rem;
+  margin-bottom: 1rem;
+}
+
+.large { font-size: 20px; }
+
+.small { font-size: calc(0.45rem + 0.5vw); }
+
+.smaller { font-size: calc(0.57rem + 0.5vw); }
+
+/**
+ * Colores
+ */
+.primary {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.background-primary { background-color: $color-white; }
+
+.text-white { color: $color-white; }
+
+.text-primary { color: $color-primary; }
+
+.text-default { color: $color-default; }
+
+.text-secondary { color: $color-secondary; }
+
+.decoration-none { text-decoration: none; }
+
+/**
+ * Reglas para dispositivos
+ */
+@media (min-width: 601px) {
+  .col-left { width: 33.33333%; }
+
+  .col-right { width: 66.66666%; }
+  
+  .button { padding: 0.4rem 2rem; }
+
+  .button-darkmode { top: 32px; }
+}
+
+@media (min-width: 1200px) {
+  .col-left { width: 33.33333%; }
+
+  .col-right { width: 33.33333%; }
+  
+  .button-darkmode { top: 32px; }
+}
+
+@media (max-width: 600px) {
+  .container { padding: 0 20px; }
+
+  .padding { padding: 0 8px; }
+}

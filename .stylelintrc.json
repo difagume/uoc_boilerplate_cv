@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-idiomatic-order"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order",
+    "stylelint-declaration-block-no-ignored-properties"
+  ],
+  "rules": {
+    "selector-nested-pattern": "^&",
+    "indentation": 2,
+    "no-descending-specificity": null,
+    "no-eol-whitespace": null,
+    "declaration-empty-line-before": null,
+    "value-keyword-case": null,
+    "plugin/declaration-block-no-ignored-properties": true,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "responsive",
+          "variants",
+          "screen",
+          "use",
+          "mixin",
+          "include",
+          "function",
+          "return"
+        ]
+      }
+    ]
+  }
+}

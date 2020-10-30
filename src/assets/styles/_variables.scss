@@ -1,0 +1,28 @@
+@use "sass:color";
+
+/**
+ * Fuentes
+ */
+$font-family-nunito: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+/**
+ * Colores
+ */
+$color-white: white;
+$color-neutro: #edf2f4;
+$color-primary: #1976d2;
+$color-primary-bg: #a9d1f5;
+$color-secondary: #e91e63;
+$color-default: color.scale(black, $lightness: 30%);
+
+/**
+ * Colores de fondo
+ */
+$background-gradient-top: #f5f6fc;
+$background-gradient-bottom: #1c64a7;
+
+/**
+ * Sombras
+ */
+$box-shadow: 0 2px 1px -1px rgba(black, 0.2), 0 1px 1px 0 rgba(black, 0.14), 0 1px 3px 0 rgba(black, 0.12);
+$box-shadow-img: 0 16px 38px -12px rgba(black, 0.56), 0 4px 25px 0 rgba(black, 0.12), 0 8px 10px -5px rgba(black, 0.2);

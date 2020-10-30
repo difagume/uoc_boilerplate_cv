@@ -1,0 +1,12 @@
+/**
+ * Reglas Sass
+ */
+@mixin float-left {
+  width: 100%;
+  float: left;
+}
+
+@mixin margin-font-weight($margin-top-bottom-value,$margin-right-left-value, $font-weight-value) {
+  margin: $margin-top-bottom-value $margin-right-left-value;
+  font-weight: $font-weight-value;
+}
